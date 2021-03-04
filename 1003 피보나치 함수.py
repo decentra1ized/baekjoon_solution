@@ -1,3 +1,20 @@
+result = []
+for k in range(int(input())):
+    n = int(input())
+    zero = [1] + [0] * 40
+    one = [0, 1] + [0] * 49
+
+    for i in range(2, n+1):
+        zero[i] = zero[i-1] + zero[i-2]
+        one[i] = one[i-1] + one[i-2]
+
+    result.append([zero[n], one[n]])
+
+for i in result:
+    print(i[0], i[1])
+    
+#아래 처럼 복잡하게 풀지 않아도 될 것 같다. 굳이 메모이제이션 피보나치까지 구현해서 일일히 해줄 필요 없음.
+'''
 a = int(input())
 
 one = 0
@@ -26,3 +43,4 @@ for i in range(a):
     result[i] = str(zero)+" "+str(one)
 
 print('\n'.join(result))
+'''
