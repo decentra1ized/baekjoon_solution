@@ -2,7 +2,7 @@ import math
 a = int(input())
 
 i = 0
-k = 1
+k = 2
 
 if a==1:
     print(1)
