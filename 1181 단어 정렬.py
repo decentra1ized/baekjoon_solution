@@ -7,7 +7,7 @@ for i in range(int(input())):
         index.append(len(k))
         data[len(k)].append(k)
         continue
-    if k not in data:
+    if k not in data[len(k)]:
         data[len(k)].append(k)
 result =[]
 index.sort()
