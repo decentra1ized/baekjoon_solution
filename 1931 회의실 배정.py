@@ -1,6 +1,6 @@
 l = int(input())
 data = []
-num = 1
+num = 0
 tail = 0
 for i in range(l):
     a, b = map(int, input().split())
@@ -9,7 +9,8 @@ data = sorted(data, key=lambda k: k[0])
 data = sorted(data, key=lambda k: k[1])
 
 for i in range(l):
-    if data[i][0] >= data[tail][1]:
-        num+=1
-        tail = i 
+    if data[i][0] >= tail:
+        num += 1
+        tail = data[i][1]
+        print(tail)
 print(num)
