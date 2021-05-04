@@ -12,5 +12,4 @@ for i in range(l):
     if data[i][0] >= tail:
         num += 1
         tail = data[i][1]
-        print(tail)
 print(num)
